@@ -1,0 +1,50 @@
+
+<div class="row mb-3">
+    <div class="col-12 mx-auto text-center">
+        <div class="card bg-">
+            <div class="card-header bg-primary">
+               <h1 class="text-light">Buscar Cliente</h1>
+            </div>
+      
+
+            <div class="card-body">
+                <form action="/users/signin" method="post">
+          <input type="hidden" name="random" value="0">
+                <div class="input-group mb-3">
+  <input type="number" class="form-control text-primary" id="tres" placeholder="ID de cliente" name="client">
+  <div class="input-group-append">
+    <button type="submit" id="entrar2" class="btn btn-primary btn-block" >Buscar Cliente</button>
+  </div>
+</div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+<table class="table border">
+  <thead class="bg-primary text-light">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Apellido y Nombre</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Domicilio</th>
+    </tr>
+  </thead>
+  <tbody>
+       {{#each users}}
+    <tr>
+      <th class="text-dark">{{client}}</th>
+      <td class="text-dark">{{username}}</td>
+    
+      <td class="text-dark">{{phone}}</td>
+      <td class="text-dark">{{home}}</td>
+    </tr>
+ {{/each}}
+  </tbody>
+</table>
+</div>

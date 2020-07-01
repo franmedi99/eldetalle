@@ -1,0 +1,80 @@
+ 
+ <div class="card col border-dark mb-1 mx-auto" style="max-width: 20rem;">
+ {{#each subtotal as |item|}}
+
+  <div class=" text-center text-light"><h1 class="text-primary">SALDO</h1></div>
+  
+   <h1 class="text-dark text-center">${{item.transaction}}</h1>
+
+<hr class="bg-dark">
+{{/each}}
+
+       {{#each usuario}}
+
+    <h3 class=" text-center text-primary">Apellido y Nombre</h3>
+    <h5 class="text-dark text-center">{{username}}</h5>
+
+    <h3 class=" text-center text-primary">Telefono</h3>
+    <h5  class="text-dark text-center">{{phone}}</h5>
+
+
+     <h3 class=" text-center text-primary">Domicilio</h3>
+     <h5 class="text-dark text-center">{{home}}</h5>
+
+     <h3 class=" text-center text-primary">Email</h3>
+     <h6 class="text-dark text-center"> {{email}}</h6>
+
+      
+  </div>
+</div>
+ {{/each}}
+  
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+<table class="table border">
+  <thead class="bg-primary">
+    <tr>
+      <th class="text-light" scope="col">Fecha</th>
+      <th class="text-light" scope="col">Desc.</th>
+      <th class="text-light" scope="col">Importe</th>
+      <th class="text-light" scope="col">E/C</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+       {{#each notes}}
+    <tr>
+      <th class="text-dark">{{date}}</th>
+      <td class="text-dark">{{product}}</td>
+    <td class="text-dark">{{transaction}}</td>
+      <td class="text-dark">{{tipo}}</td>
+  
+
+    </tr>
+
+ 
+ {{/each}}
+
+  </tbody>
+</table>
+</div>
+
+
+
+
+

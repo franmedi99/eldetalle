@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-6 mx-auto text-center">
+        <div class="card">
+            <div class="card-header">
+                <h1>Editar Cliente</h1>
+            </div>
+            <div class="card-body">
+                <form action="/customers/edit/{{users.id}}?_method=put" method="POST">
+                <div class="form-group">
+                <input type="text" name="client" class="form-control" placeholder="Identificador  de Cliente" value="{{users.client}}">
+                </div>
+                <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="Apellido y Nombre" value="{{users.username}}">
+                </div>
+
+                <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="Email" value="{{users.email}}">
+                </div>
+
+                <div class="form-group">
+                <input type="tel" name="phone" class="form-control" placeholder="Telefono" value="{{users.phone}}">
+                </div>
+
+                <div class="form-group">
+                <input type="text" name="home" class="form-control" placeholder="Domicilio" value="{{users.home}}">
+                </div>
+    
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Editar Cliente</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

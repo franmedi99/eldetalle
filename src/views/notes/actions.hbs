@@ -1,0 +1,44 @@
+<div class="card mb-3">
+  <div class="card-header"> <a href="/notes" class="btn btn-info btn-block ">Volver</a></div>
+
+   <div class="card-body">  <form action="/notes/deleteall" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-block">Borrar todas las transacciones</button>
+                </form></div>
+</div>
+<div class="row">
+<table class="table">
+  <thead class="bg-success">
+    <tr>
+      <th class="text-light" scope="col">Fecha</th>
+      <th class="text-light" scope="col">Desc.</th>
+      <th class="text-light" scope="col">Editar</th>
+      <th class="text-light" scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+       {{#each notes}}
+    <tr>
+      <th class="text-dark">{{date}}</th>
+      <td class="text-dark">{{product}}</td>
+  <td><a class="btn btn-primary btn-block btn-sm" href="/notes/edit/{{_id}}">Editar</a></td>
+      <td>                <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-block btn-sm">Borrar</button>
+                </form>
+</td>
+ 
+
+    </tr>
+
+ 
+ {{/each}}
+
+  </tbody>
+</table>
+</div>
+
+
+
+
+
