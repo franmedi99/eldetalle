@@ -12,7 +12,7 @@ helpers.isAuthenticated = (req, res, next)=>{
 
 
 helpers.conectado = (req, res, next)=>{
-    if(req.session.key){
+    if(req.session.key===process.env.KEY){
        
         return next();
     }

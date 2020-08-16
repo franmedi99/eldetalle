@@ -83,12 +83,13 @@ usersCtrl.signin = passport.authenticate('client',{
 usersCtrl.sign = async (req, res) =>{
     key1 = process.env.KEY;
     key2 = req.body.key;
-        if (key1 != key2) {
+        if (key1 === key2) {
+            req.session.key = process.env.KEY;
+            res.redirect('/users/signin');
+
+        }else{
             req.flash('error_msg', 'Contraseña Incorrecta');
             res.redirect('/');
-        }else{
-            req.session.key = key2;
-            res.redirect('/users/signin');
         }
 
    

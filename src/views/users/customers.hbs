@@ -16,7 +16,7 @@
       <td class="text-dark">{{username}}</td>
     
 <td><a class="btn btn-primary" href="/customers/edit/{{_id}}">Editar</a></td>
-      <td>                <form action="/customers/delete/{{_id}}?_method=DELETE" method="POST">
+      <td>                <form action="/customers/delete/{{_id}}?_method=DELETE" method="POST"   onsubmit="return confirm('Realmente desea eliminar este cliente, todos los datos de este cliente se perderan?');">
                 <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="btn btn-danger">Borrar</button>
                 </form>
